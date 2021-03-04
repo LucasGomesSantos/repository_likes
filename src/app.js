@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 const repositories = [];
-const likes = 0 
+const likes  = 0
 
 app.get("/repositories", (request, response) => {
     
@@ -20,7 +20,7 @@ app.get("/repositories", (request, response) => {
 
 app.post("/repositories", (request, response) => {
   
-    const { title, url, techs, likes } = request.body;
+    const { title, url, techs } = request.body;
     const repository = { id: uuidv4(), title, url, techs, likes }; 
     repositories.push(repository); 
 
